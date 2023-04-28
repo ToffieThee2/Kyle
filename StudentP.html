@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/Style7.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Products</title>
+</head>
+<body>
+    <div class="table">
+        <div class="table_header">
+            <p>Table Reservation System</p>
+        </div>
+        <div class="table_section">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Product #</th>
+                        <th>Product</th>
+                        <th>Product Name</th>
+                        <th>Description</th>
+                        <th>Order</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td><img src="image/clo1.jpg"></td>
+                        <td>T-shirt</td>
+                        <td>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</td>
+                        <td>
+                            <input type="checkbox" id="checkbox">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td><img src="image/clo2.jpg"></td>
+                        <td>T-shirt</td>
+                        <td>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</td>
+                        <td>
+                            <input type="checkbox" id="checkbox">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td><img src="image/clo4.jpg"></td>
+                        <td>T-shirt</td>
+                        <td>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</td>
+                        <td>
+                            <input type="checkbox" id="checkbox">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td><img src="image/clo3.jpeg"></td>
+                        <td>T-shirt</td>
+                        <td>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</td>
+                        <td>
+                            <input type="checkbox" id="checkbox">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td><img src="image/clo5.webp"></td>
+                        <td>T-shirt</td>
+                        <td>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</td>
+                        <td>
+                            <input type="checkbox" id="checkbox">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td><img src="image/clo6.jpg"></td>
+                        <td>T-shirt</td>
+                        <td>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</td>
+                        <td>
+                            <input type="checkbox" id="checkbox">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td><img src="image/clo7.jpg"></td>
+                        <td>T-shirt</td>
+                        <td>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</td>
+                        <td>
+                            <input type="checkbox" id="checkbox">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td><img src="image/clo6.jpg"></td>
+                        <td>T-shirt</td>
+                        <td>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</td>
+                        <td>
+                            <input type="checkbox" id="checkbox">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td><img src="image/clo9.jpg"></td>
+                        <td>T-shirt</td>
+                        <td>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</td>
+                        <td>
+                            <input type="checkbox" id="checkbox">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td><img src="image/clo14.jpg"></td>
+                        <td>T-shirt</td>
+                        <td>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</td>
+                        <td>
+                            <input type="checkbox" id="checkbox">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="add_product">
+            <div>
+                <button class="add_new" onclick="saveOrder()">Save Order</button>
+            </div>
+        </div>
+        <div class="popup" id="popup">Order saved</div>
+    </div>
+
+    <!-------- js Script --------->
+
+    <script>
+        function saveOrder() {
+  var checkboxes = document.getElementsByClassName('checkbox');
+  var checkedBoxes = [];
+
+  // loop through all checkboxes to find checked ones
+  for (var i = 0; i < checkboxes.length; i++) {
+    if (checkboxes[i].checked) {
+      checkedBoxes.push(checkboxes[i]);
+    }
+  }
+
+  // check if at least one checkbox is checked
+  if (checkedBoxes.length > 0) {
+    // show alert dialog text
+    alert('Order saved');
+    // alert('Please select at least one product');
+  } else {
+    // show error message if no checkboxes are checked
+    alert('Please select at least one product');
+    // alert('Order saved');
+  }
+}
+
+    </script>
+
+
+</body>
+</html>
